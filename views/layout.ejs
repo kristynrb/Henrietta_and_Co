@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Henrietta & Co. Wiki</title>
+  <link rel="stylesheet" type="type/css" href="/stylesheets/style_sheet.css">
+  <script src="lib/marked.js"></script>
+</head>
+
+<body>
+  <div id="all-contents">
+  <img src="http://i.imgur.com/qWHHlfU.jpg?1" />
+  <div id="wiki-name">Henrietta & Co. Wiki</div>
+  <script>
+    document.getElementById('content').innerHTML =
+      marked('# Marked in browser\n\nRendered by **marked**.');
+  </script>
+  <%- body %>
+  </div>
+</body>
+</html>

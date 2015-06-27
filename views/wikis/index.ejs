@@ -1,0 +1,40 @@
+
+
+<h2>Business</h2>
+  <dl>
+    <% wiki.forEach(function(wiki, i) { %>
+    <% if (wiki.category === "business") { %>
+          <a href="/wikis/<%= wiki._id %>"></a>
+          <dt><%= wiki.title %></dt>
+      <% }}); %>
+  </dl>
+
+<h2>Personal</h2>
+  <dl>
+    <% wiki.forEach(function(wiki, i) { %>
+    <% if (wiki.category === "personal") { %>
+        <a href="/wikis/<%= wiki._id %>"></a>
+        <dt><%= wiki.title %></dt>
+    <% }}); %>
+  </dl>
+
+<h2>Let's Collaborate</h2>
+  <dl>
+    <% wiki.forEach(function(wiki, i) { %>
+    <% if (wiki.category === "collaborate") { %>
+        <a href="/wikis/<%= wiki._id %>"></a>
+        <dt><%= wiki.title %></dt>
+    <% }}); %>
+  </dl>
+
+<h2>Just for Fun</h2>
+  <dl>
+    <% wiki.forEach(function(wiki, i) { %>
+    <% if (wiki.category === "fun") { %>
+        <a href="/wikis/<%= wiki._id %>"></a>
+        <dt><%= wiki.title %></dt>
+    <% }}); %>
+  </dl>
+
+
+<a href="/wikis/new">What's on your mind?</a>

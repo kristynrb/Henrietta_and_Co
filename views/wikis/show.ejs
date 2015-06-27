@@ -1,0 +1,11 @@
+
+<h1><%= wiki.title %></h1>
+<h4><em><%= wiki.author %></em></h4>
+<p><%= wiki.content %></p>
+<h4><%= wiki.timestamp %></h4>
+
+<a href="/wikis/<%=wiki._id%>/edit">Edit</a>
+
+<form action="/wikis/<%= wiki._id %>/?_method=DELETE" method="post">
+  <input type="submit" value="Delete">
+</form>
