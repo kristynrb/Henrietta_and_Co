@@ -1,7 +1,14 @@
-<form action="/users/login" method="post">
+<head>
+  <link rel="stylesheet" type="type/css" href="/stylesheets/style_sheet_users_login.css">
+</head>
+<form action="/users/login" method="post" id="log-in-form">
   <label>Username</label>
+  <br>
   <input type="text" name="user[username]">
+  <br>
   <label>Password</label>
+  <br>
   <input type="password" name="user[password]">
+  <br>
   <input type="submit" value="Log in!">
 </form>

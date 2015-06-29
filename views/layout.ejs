@@ -2,20 +2,42 @@
 <html>
 
 <head>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:700,400,200' rel='stylesheet' type='text/css'>
   <title>Henrietta & Co. Wiki</title>
   <link rel="stylesheet" type="type/css" href="/stylesheets/style_sheet.css">
   <script src="lib/marked.js"></script>
+  <link rel="shortcut icon" href="/public/favicon.ico">
 </head>
 
 <body>
+
   <div id="all-contents">
-  <img src="http://i.imgur.com/qWHHlfU.jpg?1" />
-  <div id="wiki-name">Henrietta & Co. Wiki</div>
-  <script>
-    document.getElementById('content').innerHTML =
-      marked('# Marked in browser\n\nRendered by **marked**.');
-  </script>
-  <%- body %>
+
+    <div>
+      <img src="http://i.imgur.com/qWHHlfU.jpg?1">
+    </div>
+
+    <div id="wiki-name">Henrietta & Co.</div>
+
+    <script>
+      document.getElementById('content').innerHTML =
+        marked('# Marked in browser\n\nRendered by **marked**.');
+    </script>
+
+    <nav id="top-nav"></nav>
+
+    <nav id="bottom-nav">
+      <ul>
+        <li>All</li>
+        <li>Business</li>
+        <li>Personal</li>
+        <li>Collaborate</li>
+        <li>Fun</li>
+      </ul>
+
+      <%- body %>
+      
+    </nav>
   </div>
 </body>
 </html>

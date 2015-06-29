@@ -1,0 +1,10 @@
+#log-in-form {
+  position: absolute;
+  bottom: 0;
+  width: 500px;
+  z-index: 1;
+  text-align: left;
+  border-radius: 5px;
+  margin-left: 45%;
+  margin-bottom: 20%;
+}
