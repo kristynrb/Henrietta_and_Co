@@ -1,18 +1,18 @@
-<form action="/wikis/<%=._id%>/?_method=PATCH" method="post">
+<form action="/wikis/<%=wiki.originalID%>" method="post">
 
-  <label>What's on your mind?: </label>
-  <input type="text" name="wiki[title]" value="<%= wiki.title %>" />
+  <label>What's on your mind?: </label><br>
+  <input type="text" name="wiki[title]" value="<%= wiki.title %>" /><br>
 
-  <label>Tell us more about it: </label>
-  <textarea name="wiki[content]"> <%= wiki.content %> </textarea>
+  <label>Tell us more about it: </label><br>
+  <textarea rows="10" cols="50" name="wiki[content]"> <%= wiki.content %> </textarea>
 
-  <label>Select a Category</label>
+  <!-- <label>Select a Category</label>
   <select name="wiki[category]">
     <option value="business">Business</option>
     <option value="personal">Personal</option>
     <option value="collaborate">Let's Collaborate</option>
     <option value="fun">Just for Fun</option>
-  </select></br>
+  </select></br> -->
 
   <input type="submit" value="Update the post" />
 

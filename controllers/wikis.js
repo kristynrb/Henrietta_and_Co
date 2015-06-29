@@ -26,7 +26,6 @@ router.get('/new', function(req, res){
 router.post('/', function (req, res){
   var newWiki = new Wiki(req.body.wiki);
   newWiki.timestamp = Date.now();
-
   newWiki.author = req.session.currentUser;
 
   //use the data that we collected and save it to database
@@ -70,6 +69,7 @@ router.delete('/:id', function(req, res){
 //EDIT
 router.get("/:id/edit", function(req, res){
   var mongoID = req.params.id;
+  var originalID = mongoID;
 
   Wiki.findOne({_id:mongoID}, function(err, foundWiki){
     if (err) {
@@ -80,21 +80,43 @@ router.get("/:id/edit", function(req, res){
   });
 });
 
-//UPDATE
-router.patch('/:id', function(req, res){
-  var mongoID = req.params.id;
-  var newInfo = req.body.wiki;
-  // create where orginal_id = mongoID
-  // sort by timestamp
+//ADD AN UPDATED POST
+router.post("/:id", function(req, res){
+  var updatedWiki = new Wiki(req.body.wiki);
+  var newWiki = new Wiki(req.body.wiki);
 
-  Wiki.update({_id:mongoID}, newInfo, function(err, newInfo){
-    if (err) {
-      console.log(err);
-    }else{
-      res.redirect(301, "/wikis/" + mongoID);
-    };
-  });
+  updatedWiki.timestamp = Date.now();
+  updatedWiki.author = req.session.currentUser;
+  // updatedWiki.originalID = mongoID;
+
+    updatedWiki.save(function(err, wiki){
+      if (err) {
+        console.log(err);
+      }else{
+        res.render('wikis/index', {wiki: wikisArray});
+        console.log("wiki: " + wiki);
+        // res.redirect(301, '/wikis/originalID');
+      }
+    });
 });
+
+
+
+//UPDATE
+// router.patch('/:id', function(req, res){
+//   var mongoID = req.params.id;
+//   var newInfo = req.body.wiki;
+//   // create where orginal_id = mongoID
+//   // sort by timestamp
+//
+//   Wiki.update({_id:mongoID}, newInfo, function(err, newInfo){
+//     if (err) {
+//       console.log(err);
+//     }else{
+//       res.redirect(301, "/wikis/" + mongoID);
+//     };
+//   });
+// });
 
 
 module.exports = router;

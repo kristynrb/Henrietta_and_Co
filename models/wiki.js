@@ -6,6 +6,7 @@ var wikiSchema = Schema({
   title: {type:String, required: true},
   content: String,
   category: String,
+  originalID: String,
   timestamp: Date
 });
 
