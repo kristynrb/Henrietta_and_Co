@@ -10,6 +10,16 @@ body {
   margin-top: 0px;
 }
 
+#back{
+  color: white;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  text-align: left;
+  position: absolute;
+  background-color: black;
+}
+
 #all-contents {
   width: 1300px;
   height: 480px;
@@ -72,6 +82,11 @@ li{
   padding-left: 90px;
   padding-right: 90px;
   padding-top: auto;
-  padding-bottom: auto;
+  padding-bottom: 15px;
   cursor:pointer;
+  top: 20px;
+}
+
+li:hover {
+  border-bottom: solid white;
 }
