@@ -6,7 +6,7 @@ var wikiSchema = Schema({
   title: {type:String, required: true},
   content: String,
   category: String,
-  timestamp: {type:Date, default: Date.now}
+  timestamp: Date
 });
 
 //"Wiki" will turn to "wikis" and  will become the collection in the MongoDB database

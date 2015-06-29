@@ -1,19 +1,24 @@
-<form action="/wikis" method="post">
 
-  <label>What's on your mind?: </label>
-  <input type="text" name="wiki[title]" placeholder="Title" /></br>
+<head>
+  <link rel="stylesheet" type="type/css" href="/stylesheets/style_sheet_wikis_new.css">
+</head>
 
-  <label>Tell us more about it: </label>
-  <textarea name="wiki[content]"></textarea></br>
+<div id="new-form">
+  <form action="/wikis" method="post">
+    <label>What's on your mind?: </label>
+    <input type="text" name="wiki[title]" placeholder="Title" /></br>
 
-  <label>Select a Category</label>
-  <select name="wiki[category]">
-    <option value="business">Business</option>
-    <option value="personal">Personal</option>
-    <option value="collaborate">Let's Collaborate</option>
-    <option value="fun">Just for Fun</option>
-  </select></br>
+    <label>Tell us more about it: </label>
+    <textarea rows="10" cols="50" name="wiki[content]"></textarea></br>
 
-  <input type="submit" value="Add your new thought" />
+    <label>Select a Category</label>
+    <select name="wiki[category]">
+      <option value="business">Business</option>
+      <option value="personal">Personal</option>
+      <option value="collaborate">Let's Collaborate</option>
+      <option value="fun">Just for Fun</option>
+    </select>
 
-</form>
+    <input type="submit" value="Add your new thought" />
+  </form>
+</div>

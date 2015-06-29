@@ -1,6 +1,7 @@
 var express = require('express'),
     router  = express.Router(),
-    Wiki    = require('../models/wiki.js');
+    Wiki    = require('../models/wiki.js'),
+    User    = require('../models/user.js');
 
 //seven restful ROUTES
 
@@ -24,6 +25,7 @@ router.get('/new', function(req, res){
 //CREATE
 router.post('/', function (req, res){
   var newWiki = new Wiki(req.body.wiki);
+  newWiki.timestamp = Date.now();
 
   newWiki.author = req.session.currentUser;
 
@@ -82,6 +84,8 @@ router.get("/:id/edit", function(req, res){
 router.patch('/:id', function(req, res){
   var mongoID = req.params.id;
   var newInfo = req.body.wiki;
+  // create where orginal_id = mongoID
+  // sort by timestamp
 
   Wiki.update({_id:mongoID}, newInfo, function(err, newInfo){
     if (err) {

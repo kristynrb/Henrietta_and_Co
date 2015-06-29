@@ -7,6 +7,8 @@
   <link rel="stylesheet" type="type/css" href="/stylesheets/style_sheet.css">
   <script src="lib/marked.js"></script>
   <link rel="shortcut icon" href="/public/favicon.ico">
+  <link rel="stylesheet" type="type/css" href="/stylesheets/reset_stylesheet.css">
+
 </head>
 
 <body>
@@ -24,20 +26,23 @@
         marked('# Marked in browser\n\nRendered by **marked**.');
     </script>
 
-    <nav id="top-nav"></nav>
+    <nav id="top-nav">
+      <button id="back" onclick="goBack()">Go Back</button>
+        <script>
+        function goBack() {window.history.back();}
+        </script>
+    </nav>
 
     <nav id="bottom-nav">
       <ul>
-        <li>All</li>
-        <li>Business</li>
-        <li>Personal</li>
-        <li>Collaborate</li>
-        <li>Fun</li>
+        <li type="radio" class="all">All</li>
+        <li type="radio" id="business">Business</li>
+        <li type="radio" id="personal">Personal</li>
+        <li type="radio" id="collaborate">Collaborate</li>
+        <li type="radio" id="fun">Fun</li>
       </ul>
-
-      <%- body %>
-      
     </nav>
+    <%- body %>
   </div>
 </body>
 </html>

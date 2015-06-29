@@ -3,3 +3,7 @@ dl{
   width: 500px;
   text-align: left;
 }
+
+#business input:checked {
+	background-color: #3399cc;
+}
