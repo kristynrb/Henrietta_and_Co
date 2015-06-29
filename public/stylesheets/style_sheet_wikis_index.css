@@ -1,9 +1,40 @@
+dl a {
+  color: black;
+  font-size: 20px;
+  height: 10px;
+  background-color: red;
+  width: 40px;
+}
+
 dl{
   border: solid 1px darkgray;
   width: 500px;
   text-align: left;
+  background-color: lightgray;
+  border-radius: 7px;
+  margin-left: 20%;
+
 }
 
-#business input:checked {
+/*#business input:checked {
 	background-color: #3399cc;
+}*/
+
+/*.all .section {
+	opacity: 0;
+	height: 0;
+	-moz-transition: height 0.75s, opacity 0.75s;
+	-0-transition: height 0.75s, opacity 0.75s;
+	-webkit-transition: height 0.75s, opacity 0.75s;
+	transition: height 0.75s, opacity 0.75s;
+	color: transparent;
 }
+
+.all input:checked + .section {
+  display: block;
+  overflow: auto;
+  height: 300px;
+  opacity: 1;
+  background-color: white;
+  color: black;
+}*/
