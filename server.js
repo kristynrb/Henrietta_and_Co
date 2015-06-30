@@ -4,8 +4,8 @@
 // Controllers are the files that setup the route/paths where you call the view paths for the models.
 
 //server.js is initializing everything / setting up the database and server
-var morgan              = require('morgan'),
-    bodyParser          = require('body-parser'),
+ // morgan              = require('morgan'),
+ var bodyParser          = require('body-parser'),
     express             = require('express'),
     marked              = require('marked'),
     mongoose            = require('mongoose'),
@@ -40,7 +40,7 @@ server.use(bodyParser.urlencoded({
 
 server.use(express.static('./public'));
 server.use(methodOverride('_method'));
-server.use(morgan('short'));
+// server.use(morgan('short'));
 server.use(expressLayouts);
 
 
