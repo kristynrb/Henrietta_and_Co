@@ -2,7 +2,7 @@
   <link rel="stylesheet" type="type/css" href="/stylesheets/style_sheet_wikis_new.css">
 </head>
 
-<form action="/wikis/<%=wiki.originalID%>" method="post">
+<form action="/wikis/<%=wiki._id%>" method="post">
 
   <label>What's on your mind?: </label><br>
   <input type="text" name="wiki[title]" value="<%= wiki.title %>"  readonly/><br>

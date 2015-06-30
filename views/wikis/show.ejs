@@ -12,7 +12,9 @@
   </div>
   <h4>Last updated: <%= wiki.timestamp %></h4><br>
 
-  <button type="button" value="Edit" formaction="/wikis/<%=wiki._id%>/edit"></button>
+  <form action="/wikis/<%=wiki._id%>/edit" method="get">
+    <input type="submit" value="Edit">
+  </form>
 
   <form action="/wikis/<%= wiki._id %>/?_method=DELETE" method="post">
     <input type="submit" value="Delete">
