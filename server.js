@@ -4,7 +4,8 @@
 // Controllers are the files that setup the route/paths where you call the view paths for the models.
 
 //server.js is initializing everything / setting up the database and server
-var bodyParser          = require('body-parser'),
+var morgan              = require('morgan'),
+    bodyParser          = require('body-parser'),
     express             = require('express'),
     marked              = require('marked'),
     mongoose            = require('mongoose'),
@@ -15,7 +16,7 @@ var bodyParser          = require('body-parser'),
     session             = require('express-session'),
     PORT                = process.env.PORT || 3000,
     //this sets it to the process port if it's defined (otherwise to 3000)
-    MONGOURI            = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/deploy_me'
+    MONGOURI            = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/deploy_me';
 
 
 
