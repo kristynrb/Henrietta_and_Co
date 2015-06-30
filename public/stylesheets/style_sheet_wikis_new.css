@@ -13,3 +13,13 @@ form {
   margin-left: 45%;
   margin-bottom: 20%;
 }
+
+input[type=submit]{
+width: 60px;
+background-color: lightgray;
+border-radius: 5px;
+float: right;
+padding: 5px;
+font-size: 10px;
+margin: 5px;
+}
