@@ -16,7 +16,7 @@
     session             = require('express-session'),
     PORT                = process.env.PORT || 3000,
     //this sets it to the process port if it's defined (otherwise to 3000)
-    MONGOURI            = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/deploy_me';
+    MONGOURI            = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/wiki_app';
 
 
 

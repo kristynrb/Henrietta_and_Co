@@ -4,50 +4,56 @@
   <link rel="stylesheet" type="type/css" href="/stylesheets/style_sheet_wikis_index.css">
 </head>
 
+<h1><a href="/wikis/new" id="contribute-button">Contribute an Article</a></h1>
 
 <h2 class="all" id="business">Business</h2>
-<input type="radio" name="section" id="section1">
+<!-- <input type="radio" name="section" id="section1"> -->
   <dl>
     <% wiki.forEach(function(wiki, i) { %>
     <% if (wiki.category === "business") { %>
-          <a href="/wikis/<%= wiki._id %>"></a>
-          <dt>What's on my mind:<br><%= wiki.title %></dt>
-          <dt>More about that:<br><%= wiki.content %></dt>
+        <div id="article">
+          <h2><a href="/wikis/<%= wiki._id %>"><%= wiki.title %></a></h2>
+          <dt>Author: <%= wiki.author %></dt><br>
+          <dt>More about that:<br><%= wiki.content %></dt><br>
+        </div>
       <% }}); %>
   </dl>
 
 <h2 class="all" id="personal">Personal</h2>
-<input type="radio" name="section" id="section2">
+<!-- <input type="radio" name="section" id="section2"> -->
   <dl>
     <% wiki.forEach(function(wiki, i) { %>
     <% if (wiki.category === "personal") { %>
-        <a href="/wikis/<%= wiki._id %>"></a>
-        <dt><%= wiki.title %></dt>
-        <dt><%= wiki.content %></dt>
+      <div id="article">
+        <h2><a href="/wikis/<%= wiki._id %>"><%= wiki.title %></a></h2>
+        <dt>Author: <%= wiki.author %></dt><br>
+        <dt><%= wiki.content %></dt><br>
+      </div>
     <% }}); %>
   </dl>
 
 <h2 class="all" id="collaborate">Let's Collaborate</h2>
-<input type="radio" name="section" id="section3">
+<!-- <input type="radio" name="section" id="section3"> -->
   <dl>
     <% wiki.forEach(function(wiki, i) { %>
     <% if (wiki.category === "collaborate") { %>
-        <a href="/wikis/<%= wiki._id %>"></a>
-        <dt><%= wiki.title %></dt>
-        <dt><%= wiki.content %></dt>
+      <div id="article">
+        <h2><a href="/wikis/<%= wiki._id %>"><%= wiki.title %></a></h2>
+        <dt>Author: <%= wiki.author %></dt><br>
+        <dt><%= wiki.content %></dt><br>
+      </div>
     <% }}); %>
   </dl>
 
 <h2 class="all" id="fun">Just for Fun</h2>
-<input type="radio" name="section" id="section4">
+<!-- <input type="radio" name="section" id="section4"> -->
   <dl>
     <% wiki.forEach(function(wiki, i) { %>
     <% if (wiki.category === "fun") { %>
-        <a href="/wikis/<%= wiki._id %>"></a>
-        <dt><%= wiki.title %></dt>
-        <dt><%= wiki.content %></dt>
+      <div id="article">
+        <h2><a href="/wikis/<%= wiki._id %>"><%= wiki.title %></a></h2>
+        <dt>Author: <%= wiki.author %></dt><br>
+        <dt><%= wiki.content %></dt><br>
+      </div>
     <% }}); %>
   </dl>
-
-
-<a href="/wikis/new">What's on your mind?</a>

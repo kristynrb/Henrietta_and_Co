@@ -1,12 +1,18 @@
 
-<h1><%= wiki.category %><h1>
-<h1><%= wiki.title %></h1>
-<h4><%= wiki.author %></h4>
-<p><%= wiki.content %></p>
-<h4><%= wiki.timestamp %></h4>
+<head>
+  <link rel="stylesheet" type="type/css" href="/stylesheets/style_sheet_wikis_show.css">
+</head>
 
-<a href="/wikis/<%=wiki._id%>/edit">Edit</a>
+<h1 id="category-title"><%= wiki.category %><h1><br>
+<div id="article">
+  <h2><%= wiki.title %></h2><br>
+  <h4>Author: <i><%= wiki.author %></i></h4><br>
+  <p><%= wiki.content %></p><br>
+  <h4>Last updated: <%= wiki.timestamp %></h4><br>
 
-<form action="/wikis/<%= wiki._id %>/?_method=DELETE" method="post">
-  <input type="submit" value="Delete">
-</form>
+  <input type="button" value="Edit" <a href="/wikis/<%=wiki._id%>/edit"></a></input>
+
+  <form action="/wikis/<%= wiki._id %>/?_method=DELETE" method="post">
+    <input type="submit" value="Delete">
+  </form>
+</div>
