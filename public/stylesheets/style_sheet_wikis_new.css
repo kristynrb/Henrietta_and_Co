@@ -11,15 +11,33 @@ form {
   text-align: left;
   border-radius: 5px;
   margin-left: 45%;
-  margin-bottom: 20%;
+  margin-bottom: 25%;
+}
+
+/*title*/
+input{
+  border-radius: 5px;
+  height: 30px;
+  width: 600px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+/*content*/
+textarea {
+  border-radius: 7px;
+  width: 600px;
+  height: 200px;
+  font-size: 15px;
 }
 
 input[type=submit]{
-width: 60px;
 background-color: lightgray;
 border-radius: 5px;
-float: right;
 padding: 5px;
-font-size: 10px;
+font-size: 15px;
 margin: 5px;
+height: 30px;
+width: 200px;
+margin-left: 30px;
 }

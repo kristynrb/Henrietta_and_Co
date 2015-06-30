@@ -7,10 +7,12 @@
 <div id="article">
   <h2><%= wiki.title %></h2><br>
   <h4>Author: <i><%= wiki.author %></i></h4><br>
-  <p><%= wiki.content %></p><br>
+  <div style="content">
+    <%- marked(wiki.content) %>
+  </div>
   <h4>Last updated: <%= wiki.timestamp %></h4><br>
 
-  <input type="button" value="Edit" <a href="/wikis/<%=wiki._id%>/edit"></a></input>
+  <button type="button" value="Edit" formaction="/wikis/<%=wiki._id%>/edit"></button>
 
   <form action="/wikis/<%= wiki._id %>/?_method=DELETE" method="post">
     <input type="submit" value="Delete">

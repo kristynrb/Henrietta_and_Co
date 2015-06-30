@@ -43,6 +43,12 @@ server.use(methodOverride('_method'));
 // server.use(morgan('short'));
 server.use(expressLayouts);
 
+// make marked available to all ejs
+server.use(function (req, res, next) {
+  res.locals.marked = marked;
+  next();
+})
+
 
 //ROUTES & CONTROLLERS
 //Homepage

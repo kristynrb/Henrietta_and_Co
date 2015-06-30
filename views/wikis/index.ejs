@@ -13,8 +13,8 @@
     <% if (wiki.category === "business") { %>
         <div id="article">
           <h2><a href="/wikis/<%= wiki._id %>"><%= wiki.title %></a></h2>
-          <dt>Author: <%= wiki.author %></dt><br>
-          <dt>More about that:<br><%= wiki.content %></dt><br>
+          <dt>Author: <i><%= wiki.author %></i></dt><br>
+          <dt style="content">More about that:<br><%- marked(wiki.content) %></dt>
         </div>
       <% }}); %>
   </dl>
@@ -26,8 +26,8 @@
     <% if (wiki.category === "personal") { %>
       <div id="article">
         <h2><a href="/wikis/<%= wiki._id %>"><%= wiki.title %></a></h2>
-        <dt>Author: <%= wiki.author %></dt><br>
-        <dt><%= wiki.content %></dt><br>
+        <dt>Author: <i><%= wiki.author %></i></dt><br>
+        <dt style="content">More about that:<br><%- marked(wiki.content) %></td><br>
       </div>
     <% }}); %>
   </dl>
@@ -39,8 +39,8 @@
     <% if (wiki.category === "collaborate") { %>
       <div id="article">
         <h2><a href="/wikis/<%= wiki._id %>"><%= wiki.title %></a></h2>
-        <dt>Author: <%= wiki.author %></dt><br>
-        <dt><%= wiki.content %></dt><br>
+        <dt>Author: <i><%= wiki.author %></i></dt><br>
+        <dt style="content">More about that:<br><%- marked(wiki.content) %></td><br>
       </div>
     <% }}); %>
   </dl>
@@ -52,8 +52,8 @@
     <% if (wiki.category === "fun") { %>
       <div id="article">
         <h2><a href="/wikis/<%= wiki._id %>"><%= wiki.title %></a></h2>
-        <dt>Author: <%= wiki.author %></dt><br>
-        <dt><%= wiki.content %></dt><br>
+        <dt>Author: <i><%= wiki.author %></i></dt><br>
+        <dt style="content">More about that:<br><%- marked(wiki.content) %></td><br>
       </div>
     <% }}); %>
   </dl>
