@@ -13,9 +13,12 @@ var morgan              = require('morgan'),
     methodOverride      = require('method-override'),
     expressLayouts      = require('express-ejs-layouts'),
     server              = express(),
-    session             = require('express-session');
+    session             = require('express-session'),
+    PORT                = process.env.PORT || 3000;
+    //this sets it to the process port if it's defined (otherwise to 3000)
 
-  
+
+
 console.log(marked('I am using __markdown__.'));
 
 //SET
@@ -67,7 +70,7 @@ db.on('error', function(){
 
 db.once('open', function(){
   console.log("Database UP AND RUNNING!");
-  server.listen(3000, function (){
+  server.listen(PORT, function (){
     console.log("Server 3000 up and running!");
   });
 });

@@ -8,3 +8,15 @@
   margin-left: 45%;
   margin-bottom: 20%;
 }
+
+input {
+  height: 30px;
+  width: 200px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+input[type=submit] {
+  margin-top:10px;
+  width: 200px;
+}

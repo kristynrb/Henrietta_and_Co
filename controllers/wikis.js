@@ -87,7 +87,7 @@ router.post("/:id", function(req, res){
 
   updatedWiki.timestamp = Date.now();
   updatedWiki.author = req.session.currentUser;
-  // updatedWiki.originalID = mongoID;
+  updatedWiki.originalID = mongoID;
 
     updatedWiki.save(function(err, wiki){
       if (err) {
