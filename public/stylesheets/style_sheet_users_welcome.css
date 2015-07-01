@@ -3,10 +3,9 @@ form {
 }
 
 .welcome-buttons {
-  /*background-color: #3399cc;*/
   height: 150px;
   width: 200px;
-  color: white;
+  color: black;
   text-shadow: 1px 1px #B3AF92;
   font-size: 25px;
   border-radius: 7px;

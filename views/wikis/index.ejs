@@ -11,7 +11,7 @@
       <% wiki.forEach(function(wiki, i) { %>
       <% if (wiki.category === "business") { %>
           <div name="article" id="article">
-            <h2><a href="/wikis/<%= wiki._id %>"><%= wiki.title %></a></h2>
+            <h1><a href="/wikis/<%= wiki._id %>"><%= wiki.title %></a></h1>
             <dt>Author: <i><%= wiki.author %></i></dt><br>
             <dt style="content">More about that:<br><%- marked(wiki.content) %></dt>
           </div>
@@ -23,7 +23,7 @@
       <% wiki.forEach(function(wiki, i) { %>
       <% if (wiki.category === "personal") { %>
         <div id="article">
-          <h2><a href="/wikis/<%= wiki._id %>/"><%= wiki.title %></a></h2>
+          <h1><a href="/wikis/<%= wiki._id %>/"><%= wiki.title %></a></h1>
           <dt>Author: <i><%= wiki.author %></i></dt><br>
           <dt style="content">More about that:<br><%- marked(wiki.content) %></td><br>
         </div>
@@ -35,7 +35,7 @@
       <% wiki.forEach(function(wiki, i) { %>
       <% if (wiki.category === "collaborate") { %>
         <div id="article">
-          <h2><a href="/wikis/<%= wiki._id %>"><%= wiki.title %></a></h2>
+          <h1><a href="/wikis/<%= wiki._id %>"><%= wiki.title %></a></h1>
           <dt>Author: <i><%= wiki.author %></i></dt><br>
           <dt style="content">More about that:<br><%- marked(wiki.content) %></td><br>
         </div>
@@ -47,7 +47,7 @@
       <% wiki.forEach(function(wiki, i) { %>
       <% if (wiki.category === "fun") { %>
         <div id="article">
-          <h2><a href="/wikis/<%= wiki._id %>"><%= wiki.title %></a></h2>
+          <h1><a href="/wikis/<%= wiki._id %>"><%= wiki.title %></a></h1>
           <dt>Author: <i><%= wiki.author %></i></dt><br>
           <dt style="content">More about that:<br><%- marked(wiki.content) %></td><br>
         </div>
