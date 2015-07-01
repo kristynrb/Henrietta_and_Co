@@ -13,7 +13,7 @@
           <div name="article" id="article">
             <h1><a href="/wikis/<%= wiki._id %>"><%= wiki.title %></a></h1>
             <dt>Author: <i><%= wiki.author %></i></dt><br>
-            <dt style="content">More about that:<br><%- marked(wiki.content) %></dt>
+            <dt style="content"><%- marked(wiki.content) %></dt>
           </div>
         <% }}); %>
     </dl>
@@ -25,7 +25,7 @@
         <div id="article">
           <h1><a href="/wikis/<%= wiki._id %>/"><%= wiki.title %></a></h1>
           <dt>Author: <i><%= wiki.author %></i></dt><br>
-          <dt style="content">More about that:<br><%- marked(wiki.content) %></td><br>
+          <dt style="content"><%- marked(wiki.content) %></td><br>
         </div>
       <% }}); %>
     </dl>
@@ -37,7 +37,7 @@
         <div id="article">
           <h1><a href="/wikis/<%= wiki._id %>"><%= wiki.title %></a></h1>
           <dt>Author: <i><%= wiki.author %></i></dt><br>
-          <dt style="content">More about that:<br><%- marked(wiki.content) %></td><br>
+          <dt style="content"><%- marked(wiki.content) %></td><br>
         </div>
       <% }}); %>
     </dl>
@@ -49,7 +49,7 @@
         <div id="article">
           <h1><a href="/wikis/<%= wiki._id %>"><%= wiki.title %></a></h1>
           <dt>Author: <i><%= wiki.author %></i></dt><br>
-          <dt style="content">More about that:<br><%- marked(wiki.content) %></td><br>
+          <dt style="content"><%- marked(wiki.content) %></td><br>
         </div>
       <% }}); %>
     </dl>
