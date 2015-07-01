@@ -3,6 +3,7 @@
   font-size: 30px;
   text-align: left;
   margin-top: 15px;
+  padding-bottom: 10px;
 }
 
 #article {
@@ -15,6 +16,7 @@
   text-align: left;
   padding: 10px;
   margin-left: 15%;
+  float: left;
 }
 
 input {
@@ -25,4 +27,13 @@ input {
   padding: 5px;
   font-size: 10px;
   margin: 5px;
+}
+
+h2{
+  font-size: 25px;
+}
+
+h4{
+  margin-top: 20px;
+  color: #B3AF92;
 }
