@@ -2,34 +2,31 @@
 <html>
 
 <head>
-  <link href='http://fonts.googleapis.com/css?family=Raleway:700,400,200' rel='stylesheet' type='text/css'>
   <title>Henrietta & Co. Wiki</title>
-  <link rel="stylesheet" type="type/css" href="/stylesheets/style_sheet.css">
-  <script src="lib/marked.js"></script>
+  <!-- Stylesheets -->
   <link rel="shortcut icon" href="/public/favicon.ico">
-  <link rel="stylesheet" type="type/css" href="/stylesheets/reset_stylesheet.css">
+  <!-- Latest compiled and minified CSS for Bootsrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+
+
+  <script src="lib/marked.js"></script>
 
 </head>
 
 <body>
-
-  <div id="all-contents">
-
-    <div>
-      <img src="http://i.imgur.com/qWHHlfU.jpg?1">
-    </div>
-
-    <div id="wiki-name">Henrietta & Co.</div>
 
     <script>
       document.getElementById('content').innerHTML =
         marked('# Marked in browser\n\nRendered by **marked**.');
     </script>
 
-    <div id="top-nav"></div>
+    <nav role="navigation">
+      <a class="navbar-brand" href="#">
+        <div id="wiki-name">Henrietta & Co.</div>
+      </a>
 
-    <nav id="bottom-nav">
-      <ul>
+      <ul class="nav nav-tabs">
         <li><a href="/wikis/#business">All</a></li>
         <li><a href="#business">Business</a></li>
         <li><a href="#personal">Personal</a></li>
@@ -37,7 +34,12 @@
         <li><a href="#fun">Fun</a></li>
       </ul>
     </nav>
+
+    <main>
+      <img  class="main-img" src="http://i.imgur.com/qWHHlfU.jpg?1">
+    </main>
+
     <%- body %>
-  </div>
+
 </body>
 </html>

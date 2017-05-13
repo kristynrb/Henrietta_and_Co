@@ -38,7 +38,8 @@ server.use(bodyParser.urlencoded({
   extended: true
 }));
 
-server.use(express.static('./public'));
+server.use(express.static(_dirname + '/public'));
+
 server.use(methodOverride('_method'));
 // server.use(morgan('short'));
 server.use(expressLayouts);
