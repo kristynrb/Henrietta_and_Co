@@ -1,4 +1,4 @@
-# Project 2
+# Project 2 - Wiki
 
 Henrietta & Co. is a MEN stack CRUD application created for my second project will attending General Assembly.
 
