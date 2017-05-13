@@ -10,7 +10,7 @@
   <div style="content">
     <%- marked(wiki.content) %>
   </div>
-  <h4>Last updated: <%= wiki.timestamp %></h4><br>
+  <h5>Last updated: <%= wiki.timestamp %></h5<br>
 
   <form action="/wikis/<%=wiki._id%>/edit" method="get">
     <input type="submit" value="Edit">
