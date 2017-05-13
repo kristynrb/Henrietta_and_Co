@@ -33,5 +33,5 @@ Advanced features
 ![wireframe1](planning/wireframe1.jpg)
 ![wireframe2](planning/wireframe2.jpg)
 ![wireframe3](planning/wireframe3.jpg)
-![wireframe4](planningwireframe4.jpg)
+![wireframe4](planning/wireframe4.jpg)
 ![trello](planning/trello.jpg)
