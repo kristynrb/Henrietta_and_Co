@@ -3,20 +3,31 @@
   <link rel="stylesheet" type="type/css" href="/stylesheets/style_sheet_wikis_show.css">
 </head>
 
-<h1 id="category-title"><%= wiki.category %><h1><br>
-<div id="article">
-  <h2><%= wiki.title %></h2><br>
-  <h4>Author: <i><%= wiki.author %></i></h4><br>
-  <div style="content">
-    <%- marked(wiki.content) %>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    Basic panel example
   </div>
-  <h5>Last updated: <%= wiki.timestamp %></h5<br>
+</div>
 
-  <form action="/wikis/<%=wiki._id%>/edit" method="get">
-    <input type="submit" value="Edit">
-  </form>
+<div class="panel panel default">
+  <div class="panel-body">
+  <h1 id="category-title"><%= wiki.category %><h1><br>
+  <div id="article" class="panel">
+    <h2><%= wiki.title %></h2><br>
+    <h4>Author: <i><%= wiki.author %></i></h4><br>
+    <div style="content">
+      <%- marked(wiki.content) %>
+    </div>
+    <h5>Last updated: <%= wiki.timestamp %></h5<br>
 
-  <form action="/wikis/<%= wiki._id %>/?_method=DELETE" method="post">
-    <input type="submit" value="Delete">
-  </form>
+    <form action="/wikis/<%=wiki._id%>/edit" method="get">
+      <input type="submit" value="Edit">
+    </form>
+
+    <form action="/wikis/<%= wiki._id %>/?_method=DELETE" method="post">
+      <input type="submit" value="Delete">
+    </form>
+  </div>
+  </div>
 </div>

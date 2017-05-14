@@ -10,52 +10,77 @@
     <% include ../partials/header %>
   </header>
 
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+      Basic panel example
+    </div>
+  </div>
+
   <h1><a href="/wikis/new" id="contribute-button">Contribute an Article</a></h1>
+  <div class="panel panel-default">
+    <div class="panel-body">
 
-  <h2 class="all" id="business">Business</h2>
-    <dl>
-      <% wiki.forEach(function(wiki, i) { %>
-      <% if (wiki.category === "business") { %>
-          <div name="article" id="article">
-            <h1><a href="/wikis/<%= wiki._id %>"><%= wiki.title %></a></h1>
-            <dt>Author: <i><%= wiki.author %></i></dt><br>
-            <dt style="content"><%- marked(wiki.content) %></dt>
+    <h2 class="all" id="business">Business</h2>
+      <dl>
+         <% wiki.forEach(function(wiki, i) { %>
+        <% if (wiki.category === "business") { %>
+            <div name="article" id="article" class="panel panel-default">
+              <p class="panel-heading"><a href="/wikis/<%= wiki._id %>"><%= wiki.title %></a></p>
+              <div class="panel-body">
+                <dt>Author: <i><%= wiki.author %></i></dt><br>
+                <dt style="content"><%- marked(wiki.content) %></dt>
+              </div>
+            </div>
+          <% }%>
+     <%  }); %>
+      </dl>
+
+    <h2 class="all" name="personal" id="personal">Personal</h2>
+      <dl>
+        <% wiki.forEach(function(wiki, i) { %>
+        <% if (wiki.category === "personal") { %>
+          <div id="article" class="panel panel-default">
+            <p class="panel-heading"><a href="/wikis/<%= wiki._id %>/"><%= wiki.title %></a></p>
+            <div class="panel-body">
+              <dt>Author: <i><%= wiki.author %></i></dt><br>
+              <dt style="content"><%- marked(wiki.content) %></td><br>
+            </div>
           </div>
-        <% }}); %>
-    </dl>
+        <% } %>
+      <% }); %>
+      </dl>
 
-  <h2 class="all" name="personal" id="personal">Personal</h2>
-    <dl>
-      <% wiki.forEach(function(wiki, i) { %>
-      <% if (wiki.category === "personal") { %>
-        <div id="article">
-          <h1><a href="/wikis/<%= wiki._id %>/"><%= wiki.title %></a></h1>
-          <dt>Author: <i><%= wiki.author %></i></dt><br>
-          <dt style="content"><%- marked(wiki.content) %></td><br>
-        </div>
-      <% }}); %>
-    </dl>
+    <h2 class="all" name="collaborate" id="collaborate">Let's Collaborate</h2>
+      <dl>
+        <% wiki.forEach(function(wiki, i) { %>
+        <% if (wiki.category === "collaborate") { %>
+          <div id="article" class="panel panel-default">
+            <p class="panel-heading"><a href="/wikis/<%= wiki._id %>"><%= wiki.title %></a></p>
+            <div class="panel-body">
+              <dt>Author: <i><%= wiki.author %></i></dt><br>
+              <dt style="content"><%- marked(wiki.content) %></td><br>
+            </div>
+          </div>
+        <% } %>
+      <% }); %>
+      </dl>
 
-  <h2 class="all" name="collaborate" id="collaborate">Let's Collaborate</h2>
-    <dl>
-      <% wiki.forEach(function(wiki, i) { %>
-      <% if (wiki.category === "collaborate") { %>
-        <div id="article">
-          <h1><a href="/wikis/<%= wiki._id %>"><%= wiki.title %></a></h1>
-          <dt>Author: <i><%= wiki.author %></i></dt><br>
-          <dt style="content"><%- marked(wiki.content) %></td><br>
-        </div>
-      <% }}); %>
-    </dl>
+    <h2 class="all" name="fun" id="fun">Just for Fun</h2>
+      <dl>
+        <% wiki.forEach(function(wiki, i) { %>
+        <% if (wiki.category === "fun") { %>
+          <div id="article" class="panel panel-default">
+            <p class="panel-heading"><a href="/wikis/<%= wiki._id %>"><%= wiki.title %></a></p>
+            <div class="panel-body">
+              <dt>Author: <i><%= wiki.author %></i></dt><br>
+              <dt style="content"><%- marked(wiki.content) %></td><br>
+            </div>
+          </div>
+        <% } %>
+      <% }); %>
+      </dl>
 
-  <h2 class="all" name="fun" id="fun">Just for Fun</h2>
-    <dl>
-      <% wiki.forEach(function(wiki, i) { %>
-      <% if (wiki.category === "fun") { %>
-        <div id="article">
-          <h1><a href="/wikis/<%= wiki._id %>"><%= wiki.title %></a></h1>
-          <dt>Author: <i><%= wiki.author %></i></dt><br>
-          <dt style="content"><%- marked(wiki.content) %></td><br>
-        </div>
-      <% }}); %>
-    </dl>
+
+    </div>
+</div>

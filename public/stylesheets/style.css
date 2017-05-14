@@ -6,3 +6,10 @@
   max-height: 500px;
   width: 100%;
 }
+
+#article {
+  display: flex;
+  /*background-color: lightgrey;*/
+  flex-direction: column;
+
+}
